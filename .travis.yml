@@ -34,6 +34,7 @@ env:
     - TARGET=test
     - UPSTREAM_URL=https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git
     - PHPUNIT_VERSION=7
+    - SYMFONY_PHPUNIT_REMOVE="" # avoid removing phpspec/prophecy
 
 matrix:
   fast_finish: true
