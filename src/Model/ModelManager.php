@@ -350,9 +350,7 @@ class ModelManager implements ModelManagerInterface, LockInterface
 
             $metadata = $this->getMetadata(ClassUtils::getClass($value));
 
-            foreach ($metadata->getIdentifierValues($value) as $value) {
-                $identifiers[] = $value;
-            }
+            $identifiers = \array_values($metadata->getIdentifierValues($value));
         }
 
         return $identifiers;
